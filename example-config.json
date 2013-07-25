@@ -1,0 +1,10 @@
+{
+	"check my elb" : {
+		"name" : "tadaa-elb", 
+		"options" : {
+			"region" : "us-east",
+			"elbName" : "myElb"
+		},
+		"interval" : 120000
+	}
+}

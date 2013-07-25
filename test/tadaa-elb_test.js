@@ -17,7 +17,7 @@ describe('tadaa-elb', function() {
     
     it('should return 1 when one instance in service', function(done) {
         describeInstanceHealth.yields(null, {InstanceStates:[{State:"InService"}]});
-        tadaaelb({region: "REGION", elbName: "ELB"}, function(e, n) {
+        tadaaelb.getValue({region: "REGION", elbName: "ELB"}, function(e, n) {
             assert.equal(e, null);
             assert.equal(n, 1);
             return done();
@@ -26,7 +26,7 @@ describe('tadaa-elb', function() {
     
     it('should return 2 when two instances in service', function(done) {
         describeInstanceHealth.yields(null, {InstanceStates:[{State:"InService"},{State:"InService"}]});
-        tadaaelb({region: "REGION", elbName: "ELB"}, function(e, n) {
+        tadaaelb.getValue({region: "REGION", elbName: "ELB"}, function(e, n) {
             assert.equal(e, null);
             assert.equal(n, 2);
             return done();
@@ -35,7 +35,7 @@ describe('tadaa-elb', function() {
     
     it('should return 1 when one instance in service, one OutOfService', function(done) {
         describeInstanceHealth.yields(null, {InstanceStates:[{State:"InService"},{State:"OutOfService"}]});
-        tadaaelb({region: "REGION", elbName: "ELB"}, function(e, n) {
+        tadaaelb.getValue({region: "REGION", elbName: "ELB"}, function(e, n) {
             assert.equal(e, null);
             assert.equal(n, 1);
             return done();

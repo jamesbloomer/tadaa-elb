@@ -1,7 +1,7 @@
 { 
     "name": "tadaa-elb",
     "description": "Monitor AWS Elastic Load Balancers via the medium of sound",
-	"version": "0.0.2",
+	"version": "0.1.0",
     "licenses": [{
         "type": "MIT",
         "url": "https://github.com/jamesbloomer/tadaa-elb/raw/master/LICENSE"
@@ -11,10 +11,11 @@
         "type": "git",
         "url": "http://github.com/jamesbloomer/tadaa-elb.git" 
     },
-    "keywords": ["monitor", "sounds", "audio", "noises", "aws", "elb"],
+    "keywords": ["tadaa", "monitor", "sounds", "audio", "noises", "aws", "elb"],
     	"dependencies": {
         "aws-sdk": "1.3.1",
-        "underscore": "1.4.4"
+        "underscore": "1.4.4",
+        "tadaa" : "*"
     },
     "devDependencies" : {
       "mocha": "1.11.0",
