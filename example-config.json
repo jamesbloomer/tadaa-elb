@@ -1,5 +1,5 @@
 {
-	"check my elb" : {
+	"check my AWS Elastic Load Balancer" : {
 		"name" : "tadaa-elb", 
 		"options" : {
 			"region" : "us-east",
